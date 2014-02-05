@@ -1,0 +1,110 @@
+%
+% Copyright (C) 2001 by Holger Karl,
+% karl@ft.ee.tu-berlin.de
+%
+% file: template.tex
+%
+% Time-stamp: Sat Oct 06 08:29:52 2001
+%
+% Template fuer die Ausarbeitungen zu TKN-Seminaren
+%
+\documentclass[12pt,twoside,doublepage]{article}
+
+% Falls die Ausarbeitung in Deutsch erfolgt,
+% die folgenden Kommentar-Zeichen '%' entfernen, andernfalls diese
+ % Kommandos auskommentiert lassen:
+% Languages:
+% \usepackage[german]{babel}
+% \usepackage[T1]{fontenc}
+% \usepackage[latin1]{inputenc}
+% \selectlanguage{german}
+\usepackage{todonotes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Im restlichen Vorspann KEINE Aenderungen machen!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{times}
+\usepackage{url}
+\usepackage[nolist]{acronym}
+
+\usepackage{geometry}
+\geometry{a4paper,body={5.8in,9in}}
+
+% Graphics:
+\usepackage{color}
+\usepackage{graphicx}
+% aller Bilder werden im Unterverzeichnis figures gesucht:
+\graphicspath{{figures/}}
+
+% Headers:
+%\usepackage{fancyhdr}
+%% \pagestyle{fancy}
+%\pagestyle{fancy}
+%\fancyhead{}
+%\fancyhead[LE]{ \slshape \teilnehmer}
+%\fancyhead[LO]{}
+%\fancyhead[RE]{}
+%\fancyhead[RO]{ \slshape \ausarbeitung}
+%\fancyfoot[C]{}
+
+% Projekt-Titel
+\newcommand{\projecttitle}{\ \\ \ \\ \ \\Project group: Cooperative visual knowledge organization \\  (WS 2013/2014)}		
+
+
+\title{
+	\includegraphics[width=12cm]{figures/uni-logo}
+	\ \\ \ \\
+	\ \\ \ \\
+	Target Specification: 
+	 \ \\ \ \\ Scientific Working Area}
+	
+	
+	
+\author{\projecttitle}
+\date{}      
+                       % Activate to display a given date or no date
+\usepackage{hyperref}
+\usepackage{todonotes}
+
+
+
+\begin{document}	
+\maketitle
+\ \\ \ \\
+\ \\ \ \\
+
+\begin{sloppypar}
+	\centering \LARGE Members goes here	\ \\ \ \\  \begin{large} \date{\today} \end{large}	 
+\end{sloppypar}
+
+\thispagestyle{empty}
+%Auf dieser Seite soll keine Seitennummer auftauchen
+\clearpage
+% eine neue Seite beginnen
+%\setcounter{tocdepth}{2}
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ab hier steht der eigentliche Text:
+
+\pagenumbering{arabic}
+
+\begin{acronym}[somethinglonger]
+	\acro{MyAcro}{...}
+\end{acronym}
+	\clearpage 
+
+\include{chapters/1goals}
+\include{chapters/2deploy}
+\include{chapters/3functions}
+\include{chapters/4characteristics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{bib}
+\bibliographystyle{plain}
+
+\end{document}
+
+
